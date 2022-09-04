@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>CSS Kart</title>
+    <title>practice web - 1</title>
 
     <link
       rel="stylesheet"
@@ -8,13 +8,34 @@
     />
 
     <style>
-      .card img {
-        width: 100%;
-        height: 150px;
+      .card-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
       }
       .carousel img {
-        width: 100%;
         height: 500px;
+        width: 100%;
+      }
+
+      .card img {
+        height: 200px;
+        width: 100%;
+      }
+      .card {
+        width: calc(25% - 20px);
+      }
+      @media (max-width: 992px) {
+        .card {
+          width: calc(50% - 20px);
+        }
+      }
+      @media (max-width: 768px) {
+        .card {
+          width: 100%;
+        }
       }
     </style>
   </head>
@@ -22,7 +43,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">CSS Kart</a>
+        <a target="_blank" class="navbar-brand" href="#">CSS Kart</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -37,13 +58,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a
+                target="_blank"
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a target="_blank" class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item dropdown">
               <a
+                target="_blank"
                 class="nav-link dropdown-toggle"
                 href="#"
                 id="navbarDropdown"
@@ -54,16 +82,25 @@
                 Dropdown
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a target="_blank" class="dropdown-item" href="#">Action</a>
+                </li>
+                <li>
+                  <a target="_blank" class="dropdown-item" href="#"
+                    >Another action</a
+                  >
+                </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a target="_blank" class="dropdown-item" href="#"
+                    >Something else here</a
+                  >
                 </li>
               </ul>
             </li>
             <li class="nav-item">
               <a
+                target="_blank"
                 class="nav-link disabled"
                 href="#"
                 tabindex="-1"
@@ -88,37 +125,44 @@
     </nav>
 
     <div
-      id="carouselExampleFade"
-      class="carousel slide carousel-fade"
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
       data-bs-ride="carousel"
     >
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="https://cdn.stocksnap.io/img-thumbs/960w/woodpecker-bird_6XMNEMASTW.jpg"
+            src="https://static.theprint.in/wp-content/uploads/2022/07/Untitled-design-10-1.jpg?compress=true&quality=80&w=800&dpr=1.0"
             class="d-block w-100"
-            alt="bird"
+            alt="nature"
           />
         </div>
         <div class="carousel-item">
           <img
-            src="https://cdn.stocksnap.io/img-thumbs/960w/bird-wildlife_MUEAXVETX4.jpg"
+            src="https://image.shutterstock.com/image-illustration/3d-nature-forest-animals-wallpaper-600w-1707250756.jpg"
             class="d-block w-100"
-            alt="duck"
+            alt="nature"
           />
         </div>
         <div class="carousel-item">
           <img
-            src="https://cdn.stocksnap.io/img-thumbs/960w/bird-bluebird_ODOY86AWIV.jpg"
+            src="https://image.shutterstock.com/image-photo/colorful-flower-on-dark-tropical-600w-721703848.jpg"
             class="d-block w-100"
-            alt="..."
+            alt="flower"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://image.shutterstock.com/image-illustration/3d-nature-forest-animals-wallpaper-600w-1707263671.jpg"
+            class="d-block w-100"
+            alt="beach"
           />
         </div>
       </div>
       <button
         class="carousel-control-prev"
         type="button"
-        data-bs-target="#carouselExampleFade"
+        data-bs-target="#carouselExampleSlidesOnly"
         data-bs-slide="prev"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -127,7 +171,7 @@
       <button
         class="carousel-control-next"
         type="button"
-        data-bs-target="#carouselExampleFade"
+        data-bs-target="#carouselExampleSlidesOnly"
         data-bs-slide="next"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -135,110 +179,237 @@
       </button>
     </div>
 
-    <div class="d-flex justify-content-start flex-wrap gap-3 mt-5 mx-5">
-      <div class="card" style="width: 18rem">
+    <div class="card-wrapper container-fluid">
+      <div class="card">
         <img
-          src="https://media.istockphoto.com/id/857490104/photo/asphalt-road-in-austria-alps-in-a-summer-day.webp?s=612x612&w=is&k=20&c=Lb-5qBAgkmOOY12PWZrEvKbv3wV4REY8HobRNZQfRag="
-          alt="roadpic"
-        />
-        <div class="card-header">
-          <h3>Hello Google</h3>
-        </div>
-        <div class="card-body">
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg"
-          alt="nature"
-        />
-        <div class="card-header">
-          <h3>Hello World</h3>
-        </div>
-        <div class="card-body">
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://media.istockphoto.com/id/1344837084/photo/young-woman-with-backpack-outdoors.webp?s=612x612&w=is&k=20&c=e28atZp7nKuQvRkYd9zso9M9GA5GRhgs1OLhYFbkuxg="
-          alt="nature"
-        />
-        <div class="card-header">
-          <h3>Hello Google</h3>
-        </div>
-        <div class="card-body">
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://media.istockphoto.com/photos/mountain-landscape-picture-id517188688"
-          alt="nature"
-        />
-
-        <div class="card-header">
-          <h3>Hello World</h3>
-        </div>
-        <div class="card-body">
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://cdn.pixabay.com/photo/2014/04/14/20/11/pink-324175_960_720.jpghttps://cdn.pixabay.com/photo/2014/04/14/20/11/pink-324175_960_720.jpg"
+          src="https://assets.hongkiat.com/uploads/100-absolutely-beautiful-nature-wallpapers-for-your-desktop/blue-sea-sunset.jpg"
           class="card-img-top"
-          alt="nature pic"
+          alt="light mode"
         />
-        <div class="card-header">
-          <h3>Hello World</h3>
-        </div>
         <div class="card-body">
+          <h5 class="card-title">Card title</h5>
           <p class="card-text">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a
+            target="_blank"
+            href="https://assets.hongkiat.com/uploads/100-absolutely-beautiful-nature-wallpapers-for-your-desktop/blue-sea-sunset.jpg"
+            >View Image</a
+          >
         </div>
       </div>
-      <div class="card" style="width: 18rem">
+      <div class="card">
         <img
-          src="https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_960_720.jpg"
+          src="https://scontent.fbom3-1.fna.fbcdn.net/v/t39.30808-6/246218410_111654831296644_8319364236832531715_n.jpg?stp=cp0_dst-jpg_e15_p320x320_q65&_nc_cat=106&ccb=1-7&_nc_sid=dd9801&_nc_ohc=48Ssy45ntrYAX8L_a0G&_nc_ht=scontent.fbom3-1.fna&oh=00_AT8Na9KTcCmnIOhbUTVKWXQx9HBQKn_aE6jzhlqeMzUwYg&oe=6319F82D"
           class="card-img-top"
-          alt="flower"
+          alt="beach"
         />
-        <div class="card-header">
-          <h3>Hello World</h3>
-        </div>
         <div class="card-body">
+          <h5 class="card-title">Card title</h5>
           <p class="card-text">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a
+            target="_blank"
+            href="https://scontent.fbom3-1.fna.fbcdn.net/v/t39.30808-6/246218410_111654831296644_8319364236832531715_n.jpg?stp=cp0_dst-jpg_e15_p320x320_q65&_nc_cat=106&ccb=1-7&_nc_sid=dd9801&_nc_ohc=48Ssy45ntrYAX8L_a0G&_nc_ht=scontent.fbom3-1.fna&oh=00_AT8Na9KTcCmnIOhbUTVKWXQx9HBQKn_aE6jzhlqeMzUwYg&oe=6319F82D"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://1.bp.blogspot.com/-Xknu5DIRoD0/XQhL-mjgAAI/AAAAAAAABXg/FMBvcv2XACs7bHFvH8LJ2k4X2QGGrKA-gCLcBGAs/s1600/pemandangan-terbaik-di-dunia.jpg"
+          class="card-img-top"
+          alt="greenery"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            target="_blank"
+            href="https://1.bp.blogspot.com/-Xknu5DIRoD0/XQhL-mjgAAI/AAAAAAAABXg/FMBvcv2XACs7bHFvH8LJ2k4X2QGGrKA-gCLcBGAs/s1600/pemandangan-terbaik-di-dunia.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1506875644286-0fa3dc4df91f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          class="card-img-top"
+          alt="sea"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            target="_blank"
+            href="https://images.unsplash.com/photo-1506875644286-0fa3dc4df91f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+          class="card-img-top"
+          alt="sea"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            target="_blank"
+            href="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://i.pinimg.com/564x/2f/2a/27/2f2a273747c6ff0e2f90a4d49ecc4cc5.jpg"
+          class="card-img-top"
+          alt="beach pic"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            target="_blank"
+            href="https://i.pinimg.com/564x/2f/2a/27/2f2a273747c6ff0e2f90a4d49ecc4cc5.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://i.pinimg.com/564x/22/b4/d9/22b4d9e67994946df92919a5bee2c235.jpg"
+          class="card-img-top"
+          alt="evening pic"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            target="_blank"
+            href="https://i.pinimg.com/564x/22/b4/d9/22b4d9e67994946df92919a5bee2c235.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://i.pinimg.com/564x/89/86/87/8986877f51716aba9546bebef20359b1.jpg"
+          class="card-img-top"
+          alt="beach pic"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            target="_blank"
+            href="https://i.pinimg.com/564x/89/86/87/8986877f51716aba9546bebef20359b1.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://st.depositphotos.com/3099225/3959/i/450/depositphotos_39598633-stock-photo-oak-tree.jpg"
+          class="card-img-top"
+          alt="tree pic"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            target="_blank"
+            href="https://st.depositphotos.com/3099225/3959/i/450/depositphotos_39598633-stock-photo-oak-tree.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://i.pinimg.com/736x/a8/2c/86/a82c86f5dac0ccc3cd70e9456b44d5c4.jpg"
+          class="card-img-top"
+          alt="tree pic"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            target="_blank"
+            href="https://i.pinimg.com/736x/a8/2c/86/a82c86f5dac0ccc3cd70e9456b44d5c4.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://qphs.fs.quoracdn.net/main-qimg-32cd5cf523f8acd9e5b826692dfb083c-lq"
+          class="card-img-top"
+          alt="crow"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            target="_blank"
+            href="https://qphs.fs.quoracdn.net/main-qimg-32cd5cf523f8acd9e5b826692dfb083c-lq"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://qphs.fs.quoracdn.net/main-qimg-162b34b9e5bcd2ac2d07366521f0315e-pjlq"
+          class="card-img-top"
+          alt="animal"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            target="_blank"
+            href="https://qphs.fs.quoracdn.net/main-qimg-162b34b9e5bcd2ac2d07366521f0315e-pjlq"
+            >View Image</a
+          >
         </div>
       </div>
     </div>
-    <div class="bg-dark text-light p-5 mt-5">
-      <p>copyright&copy; 2018</p>
-    </div>
+    <div class="bg-dark mt-5 p-5 text-light">copyright&copy; 2018</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
