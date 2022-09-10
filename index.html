@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>CSS Kart</title>
+    <title>Practice of Website 2</title>
 
     <link
       rel="stylesheet"
@@ -8,12 +8,20 @@
     />
 
     <style>
+      .card-title {
+        text-transform: uppercase;
+        text-decoration: bold;
+        text-align: center;
+      }
+      .card-text {
+        font-family: italic;
+      }
       .card-wrapper {
         display: flex;
-        justify-content: space-evenly;
         flex-wrap: wrap;
-        gap: 20px;
+        justify-content: space-evenly;
         margin-top: 20px;
+        gap: 20px;
       }
       .carousel img {
         height: 500px;
@@ -24,6 +32,7 @@
         height: 200px;
         width: 100%;
       }
+
       .card {
         width: calc(25% - 20px);
       }
@@ -43,7 +52,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a target="_blank" class="navbar-brand" href="#">CSS Kart</a>
+        <a class="navbar-brand" href="#">Navbar</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -58,20 +67,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a
-                target="_blank"
-                class="nav-link active"
-                aria-current="page"
-                href="#"
-                >Home</a
-              >
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a target="_blank" class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item dropdown">
               <a
-                target="_blank"
                 class="nav-link dropdown-toggle"
                 href="#"
                 id="navbarDropdown"
@@ -82,25 +84,16 @@
                 Dropdown
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a target="_blank" class="dropdown-item" href="#">Action</a>
-                </li>
-                <li>
-                  <a target="_blank" class="dropdown-item" href="#"
-                    >Another action</a
-                  >
-                </li>
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a target="_blank" class="dropdown-item" href="#"
-                    >Something else here</a
-                  >
+                  <a class="dropdown-item" href="#">Something else here</a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
               <a
-                target="_blank"
                 class="nav-link disabled"
                 href="#"
                 tabindex="-1"
@@ -125,44 +118,59 @@
     </nav>
 
     <div
-      id="carouselExampleSlidesOnly"
+      id="carouselExampleIndicators"
       class="carousel slide"
       data-bs-ride="carousel"
     >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="https://static.theprint.in/wp-content/uploads/2022/07/Untitled-design-10-1.jpg?compress=true&quality=80&w=800&dpr=1.0"
+            src="https://media.istockphoto.com/id/1243410279/photo/portrait-of-two-cute-cuddling-budgies-perched-on-branch-with-blue-background-as-symbol-of.webp?s=612x612&w=is&k=20&c=c67Taxzf7i3ULAL6yYrHESTMb_f4gQ7dCAfVoECXPxc="
             class="d-block w-100"
-            alt="nature"
+            alt="bird cuouple"
           />
         </div>
         <div class="carousel-item">
           <img
-            src="https://image.shutterstock.com/image-illustration/3d-nature-forest-animals-wallpaper-600w-1707250756.jpg"
+            src="https://media.istockphoto.com/id/1017810548/photo/the-little-owl-with-his-chick-standing-on-a-stone.webp?s=612x612&w=is&k=20&c=xZDJmcH_tXtwAQPrIkFRhSc7WADG16rPGyenBAtQYhI="
             class="d-block w-100"
-            alt="nature"
+            alt="sparrow couple"
           />
         </div>
         <div class="carousel-item">
           <img
-            src="https://image.shutterstock.com/image-photo/colorful-flower-on-dark-tropical-600w-721703848.jpg"
+            src="https://media.istockphoto.com/id/696478774/photo/lovebird-kiss.webp?s=612x612&w=is&k=20&c=aFIFtF_DfLPuBLIiwc31ldTquD_3OQbJXsxKMT2LZkY="
             class="d-block w-100"
-            alt="flower"
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="https://image.shutterstock.com/image-illustration/3d-nature-forest-animals-wallpaper-600w-1707263671.jpg"
-            class="d-block w-100"
-            alt="beach"
+            alt="parrot couple"
           />
         </div>
       </div>
       <button
         class="carousel-control-prev"
         type="button"
-        data-bs-target="#carouselExampleSlidesOnly"
+        data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -171,7 +179,7 @@
       <button
         class="carousel-control-next"
         type="button"
-        data-bs-target="#carouselExampleSlidesOnly"
+        data-bs-target="#carouselExampleIndicators"
         data-bs-slide="next"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -182,9 +190,9 @@
     <div class="card-wrapper container-fluid">
       <div class="card">
         <img
-          src="https://assets.hongkiat.com/uploads/100-absolutely-beautiful-nature-wallpapers-for-your-desktop/blue-sea-sunset.jpg"
+          src="https://media.istockphoto.com/id/679868086/photo/best-friends-bunny-rabbit-and-chick-are-kissing.webp?s=612x612&w=is&k=20&c=GLXVt7-LKDyet0iUE0_Hb85sqY-VYm2dHGgbqdfJ4b8="
           class="card-img-top"
-          alt="light mode"
+          alt="cute couple"
         />
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -193,17 +201,16 @@
             bulk of the card's content.
           </p>
           <a
-            target="_blank"
-            href="https://assets.hongkiat.com/uploads/100-absolutely-beautiful-nature-wallpapers-for-your-desktop/blue-sea-sunset.jpg"
+            href="https://media.istockphoto.com/id/679868086/photo/best-friends-bunny-rabbit-and-chick-are-kissing.webp?s=612x612&w=is&k=20&c=GLXVt7-LKDyet0iUE0_Hb85sqY-VYm2dHGgbqdfJ4b8="
             >View Image</a
           >
         </div>
       </div>
       <div class="card">
         <img
-          src="https://scontent.fbom3-1.fna.fbcdn.net/v/t39.30808-6/246218410_111654831296644_8319364236832531715_n.jpg?stp=cp0_dst-jpg_e15_p320x320_q65&_nc_cat=106&ccb=1-7&_nc_sid=dd9801&_nc_ohc=48Ssy45ntrYAX8L_a0G&_nc_ht=scontent.fbom3-1.fna&oh=00_AT8Na9KTcCmnIOhbUTVKWXQx9HBQKn_aE6jzhlqeMzUwYg&oe=6319F82D"
+          src="https://media.istockphoto.com/id/477843515/photo/freedom-peace-and-spirituality.webp?s=612x612&w=is&k=20&c=76aOJcEAr8OoVnP4lUOpbFHNXCtn9rZZ6JnbLFRFbJQ="
           class="card-img-top"
-          alt="beach"
+          alt="..."
         />
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -212,17 +219,16 @@
             bulk of the card's content.
           </p>
           <a
-            target="_blank"
-            href="https://scontent.fbom3-1.fna.fbcdn.net/v/t39.30808-6/246218410_111654831296644_8319364236832531715_n.jpg?stp=cp0_dst-jpg_e15_p320x320_q65&_nc_cat=106&ccb=1-7&_nc_sid=dd9801&_nc_ohc=48Ssy45ntrYAX8L_a0G&_nc_ht=scontent.fbom3-1.fna&oh=00_AT8Na9KTcCmnIOhbUTVKWXQx9HBQKn_aE6jzhlqeMzUwYg&oe=6319F82D"
+            href="https://media.istockphoto.com/id/477843515/photo/freedom-peace-and-spirituality.webp?s=612x612&w=is&k=20&c=76aOJcEAr8OoVnP4lUOpbFHNXCtn9rZZ6JnbLFRFbJQ="
             >View Image</a
           >
         </div>
       </div>
       <div class="card">
         <img
-          src="https://1.bp.blogspot.com/-Xknu5DIRoD0/XQhL-mjgAAI/AAAAAAAABXg/FMBvcv2XACs7bHFvH8LJ2k4X2QGGrKA-gCLcBGAs/s1600/pemandangan-terbaik-di-dunia.jpg"
+          src="https://media.istockphoto.com/id/672310454/photo/woman-praying-and-free-bird-enjoying-nature-on-sunset-background-hope-concept.webp?s=612x612&w=is&k=20&c=526Km-2dM1PGTe3TUvTcPLnkNqfQZF3r6k_FjpQg3UM="
           class="card-img-top"
-          alt="greenery"
+          alt="..."
         />
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -231,17 +237,16 @@
             bulk of the card's content.
           </p>
           <a
-            target="_blank"
-            href="https://1.bp.blogspot.com/-Xknu5DIRoD0/XQhL-mjgAAI/AAAAAAAABXg/FMBvcv2XACs7bHFvH8LJ2k4X2QGGrKA-gCLcBGAs/s1600/pemandangan-terbaik-di-dunia.jpg"
+            href="https://media.istockphoto.com/id/672310454/photo/woman-praying-and-free-bird-enjoying-nature-on-sunset-background-hope-concept.webp?s=612x612&w=is&k=20&c=526Km-2dM1PGTe3TUvTcPLnkNqfQZF3r6k_FjpQg3UM="
             >View Image</a
           >
         </div>
       </div>
       <div class="card">
         <img
-          src="https://images.unsplash.com/photo-1506875644286-0fa3dc4df91f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          src="https://media.istockphoto.com/id/1066912630/photo/romantic-two-swans-on-a-lake.webp?s=612x612&w=is&k=20&c=MUlWja6U9Ygh5SHIEj5PQDPH0n9noXJCYhMdkTn-8L8="
           class="card-img-top"
-          alt="sea"
+          alt="..."
         />
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -250,17 +255,16 @@
             bulk of the card's content.
           </p>
           <a
-            target="_blank"
-            href="https://images.unsplash.com/photo-1506875644286-0fa3dc4df91f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            href="https://media.istockphoto.com/id/1066912630/photo/romantic-two-swans-on-a-lake.webp?s=612x612&w=is&k=20&c=MUlWja6U9Ygh5SHIEj5PQDPH0n9noXJCYhMdkTn-8L8="
             >View Image</a
           >
         </div>
       </div>
       <div class="card">
         <img
-          src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+          src="https://th-thumbnailer.cdn-si-edu.com/8Svs3RIDgW2DMFwU0mgaC4__Hys=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/46/c7/46c7da28-e266-497b-9bc3-d25e291ee962/istock-1144653112.jpg"
           class="card-img-top"
-          alt="sea"
+          alt="..."
         />
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -269,17 +273,16 @@
             bulk of the card's content.
           </p>
           <a
-            target="_blank"
-            href="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            href="https://th-thumbnailer.cdn-si-edu.com/8Svs3RIDgW2DMFwU0mgaC4__Hys=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/46/c7/46c7da28-e266-497b-9bc3-d25e291ee962/istock-1144653112.jpg"
             >View Image</a
           >
         </div>
       </div>
       <div class="card">
         <img
-          src="https://i.pinimg.com/564x/2f/2a/27/2f2a273747c6ff0e2f90a4d49ecc4cc5.jpg"
+          src="https://th-thumbnailer.cdn-si-edu.com/-T7xmSBAhYjyPrwv3W5YnRKZ7Q8=/fit-in/1072x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/4c/64/4c64e7b1-4ba2-48fa-870b-66905cd3c32d/4034545077_7f54fb9096_o.jpg"
           class="card-img-top"
-          alt="beach pic"
+          alt="..."
         />
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -288,17 +291,16 @@
             bulk of the card's content.
           </p>
           <a
-            target="_blank"
-            href="https://i.pinimg.com/564x/2f/2a/27/2f2a273747c6ff0e2f90a4d49ecc4cc5.jpg"
+            href="https://th-thumbnailer.cdn-si-edu.com/-T7xmSBAhYjyPrwv3W5YnRKZ7Q8=/fit-in/1072x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/4c/64/4c64e7b1-4ba2-48fa-870b-66905cd3c32d/4034545077_7f54fb9096_o.jpg"
             >View Image</a
           >
         </div>
       </div>
       <div class="card">
         <img
-          src="https://i.pinimg.com/564x/22/b4/d9/22b4d9e67994946df92919a5bee2c235.jpg"
+          src="https://th-thumbnailer.cdn-si-edu.com/WOqSWTspr06UZZAflsF9_6GWCJI=/fit-in/1072x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/db/31/db31736a-3394-4185-a0bb-e8d34d5659f9/istock-683051354.jpg"
           class="card-img-top"
-          alt="evening pic"
+          alt="..."
         />
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -307,17 +309,16 @@
             bulk of the card's content.
           </p>
           <a
-            target="_blank"
-            href="https://i.pinimg.com/564x/22/b4/d9/22b4d9e67994946df92919a5bee2c235.jpg"
+            href="https://th-thumbnailer.cdn-si-edu.com/WOqSWTspr06UZZAflsF9_6GWCJI=/fit-in/1072x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/db/31/db31736a-3394-4185-a0bb-e8d34d5659f9/istock-683051354.jpg"
             >View Image</a
           >
         </div>
       </div>
       <div class="card">
         <img
-          src="https://i.pinimg.com/564x/89/86/87/8986877f51716aba9546bebef20359b1.jpg"
+          src="https://ichef.bbci.co.uk/news/976/cpsprodpb/FB9E/production/_110941446_gettyimages-973115596-594x594.jpg.webp"
           class="card-img-top"
-          alt="beach pic"
+          alt="..."
         />
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -326,17 +327,16 @@
             bulk of the card's content.
           </p>
           <a
-            target="_blank"
-            href="https://i.pinimg.com/564x/89/86/87/8986877f51716aba9546bebef20359b1.jpg"
+            href="https://ichef.bbci.co.uk/news/976/cpsprodpb/FB9E/production/_110941446_gettyimages-973115596-594x594.jpg.webp"
             >View Image</a
           >
         </div>
       </div>
       <div class="card">
         <img
-          src="https://st.depositphotos.com/3099225/3959/i/450/depositphotos_39598633-stock-photo-oak-tree.jpg"
+          src="https://static.scientificamerican.com/sciam/cache/file/793F30A0-FDDA-40C4-A040FCEE4FBD02AE_source.jpg?w=2000&h=1123&3DCB8DF8-2D53-4C4F-A7F6E43836FDBA09"
           class="card-img-top"
-          alt="tree pic"
+          alt="group of birds"
         />
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -345,17 +345,16 @@
             bulk of the card's content.
           </p>
           <a
-            target="_blank"
-            href="https://st.depositphotos.com/3099225/3959/i/450/depositphotos_39598633-stock-photo-oak-tree.jpg"
+            href="https://static.scientificamerican.com/sciam/cache/file/793F30A0-FDDA-40C4-A040FCEE4FBD02AE_source.jpg?w=2000&h=1123&3DCB8DF8-2D53-4C4F-A7F6E43836FDBA09"
             >View Image</a
           >
         </div>
       </div>
       <div class="card">
         <img
-          src="https://i.pinimg.com/736x/a8/2c/86/a82c86f5dac0ccc3cd70e9456b44d5c4.jpg"
+          src="  https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/02/25/Pictures/flamingoes-sambhar-lake-rajasthan-india_8cb792b4-57d6-11ea-8541-e1442385f8f3.jpg"
           class="card-img-top"
-          alt="tree pic"
+          alt="..."
         />
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -364,17 +363,16 @@
             bulk of the card's content.
           </p>
           <a
-            target="_blank"
-            href="https://i.pinimg.com/736x/a8/2c/86/a82c86f5dac0ccc3cd70e9456b44d5c4.jpg"
+            href="  https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/02/25/Pictures/flamingoes-sambhar-lake-rajasthan-india_8cb792b4-57d6-11ea-8541-e1442385f8f3.jpg"
             >View Image</a
           >
         </div>
       </div>
       <div class="card">
         <img
-          src="https://qphs.fs.quoracdn.net/main-qimg-32cd5cf523f8acd9e5b826692dfb083c-lq"
+          src="https://nas-national-prod.s3.amazonaws.com/styles/hero_image/s3/mockingbird-original-size.jpg?itok=hj4kZdIm"
           class="card-img-top"
-          alt="crow"
+          alt="..."
         />
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -383,17 +381,16 @@
             bulk of the card's content.
           </p>
           <a
-            target="_blank"
-            href="https://qphs.fs.quoracdn.net/main-qimg-32cd5cf523f8acd9e5b826692dfb083c-lq"
+            href="  https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/02/25/Pictures/flamingoes-sambhar-lake-rajasthan-india_8cb792b4-57d6-11ea-8541-e1442385f8f3.jpg"
             >View Image</a
           >
         </div>
       </div>
       <div class="card">
         <img
-          src="https://qphs.fs.quoracdn.net/main-qimg-162b34b9e5bcd2ac2d07366521f0315e-pjlq"
+          src="https://cdn.pixabay.com/photo/2015/11/16/16/28/bird-1045954_960_720.jpg"
           class="card-img-top"
-          alt="animal"
+          alt="..."
         />
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -402,14 +399,160 @@
             bulk of the card's content.
           </p>
           <a
-            target="_blank"
-            href="https://qphs.fs.quoracdn.net/main-qimg-162b34b9e5bcd2ac2d07366521f0315e-pjlq"
+            href="https://cdn.pixabay.com/photo/2015/11/16/16/28/bird-1045954_960_720.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/08/13/15/bird-2295431_960_720.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            href="https://cdn.pixabay.com/photo/2015/11/16/16/28/bird-1045954_960_720.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://cdn.pixabay.com/photo/2017/07/18/18/24/dove-2516641_960_720.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            href="https://cdn.pixabay.com/photo/2017/07/18/18/24/dove-2516641_960_720.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://cdn.pixabay.com/photo/2017/03/13/10/25/hummingbird-2139279_960_720.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            href="https://cdn.pixabay.com/photo/2017/03/13/10/25/hummingbird-2139279_960_720.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://cdn.pixabay.com/photo/2017/02/18/13/55/swan-2077219_960_720.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            href="https://cdn.pixabay.com/photo/2017/02/18/13/55/swan-2077219_960_720.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://cdn.pixabay.com/photo/2012/02/24/16/59/swan-16736_960_720.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            href="https://cdn.pixabay.com/photo/2012/02/24/16/59/swan-16736_960_720.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://cdn.pixabay.com/photo/2014/11/28/01/01/jay-548381_960_720.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            href="https://cdn.pixabay.com/photo/2014/11/28/01/01/jay-548381_960_720.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://cdn.pixabay.com/photo/2017/05/28/10/23/swan-2350668_960_720.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            href="https://cdn.pixabay.com/photo/2017/05/28/10/23/swan-2350668_960_720.jpg"
+            >View Image</a
+          >
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://nas-national-prod.s3.amazonaws.com/styles/hero_image/s3/web_groom_downywoodpecker-6.jpg?itok=RyLqktdP"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a
+            href="https://nas-national-prod.s3.amazonaws.com/styles/hero_image/s3/web_groom_downywoodpecker-6.jpg?itok=RyLqktdP"
             >View Image</a
           >
         </div>
       </div>
     </div>
-    <div class="bg-dark mt-5 p-5 text-light">copyright&copy; 2018</div>
+    <div class="bg-dark text-light p-3 mt-5">
+      <p>copyright&copy; 2018</p>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
